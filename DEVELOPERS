@@ -30,6 +30,7 @@ N:	Abhilash Tuse <abhilash.tuse@imgtec.com>
 F:	package/gstreamer1/gst1-rtsp-server/
 
 N:	Adam Duskett <aduskett@gmail.com>
+F:	package/gstreamer1/gst1-vaapi/
 F:	package/nginx-naxsi/
 F:	package/python-mutagen/
 F:	package/sngrep/
@@ -287,7 +288,6 @@ N:	Carlo Caione <carlo.caione@gmail.com>
 F:	package/sunxi-boards/
 
 N:	Carlos Santos <casantos@datacom.ind.br>
-F:	package/gmock/
 F:	package/gtest/
 F:	package/libpam-radius-auth/
 F:	package/libpam-tacplus/
@@ -300,11 +300,17 @@ F:	package/libdvbsi/
 F:	package/libsvg/
 F:	package/libsvg-cairo/
 
+N:	Chris Frederick <chrisf@cdf123.net>
+F:	package/firejail/
+
 N:	Chris Packham <judge.packham@gmail.com>
 F:	package/eventlog/
 F:	package/micropython/
 F:	package/micropython-lib/
 F:	package/syslog-ng/
+
+N:	Christian Kellermann <christian.kellermann@solectrix.de>
+F:	package/python-pylibftdi/
 
 N:	Christian Stewart <christian@paral.in>
 F:	linux/linux-ext-aufs.mk
@@ -435,6 +441,13 @@ F:	package/execline/
 F:	package/hicolor-icon-theme/
 F:	package/jemalloc/
 F:	package/ninja/
+F:	package/s6/
+F:	package/s6-dns/
+F:	package/s6-linux-init/
+F:	package/s6-linux-utils/
+F:	package/s6-networking/
+F:	package/s6-portable-utils/
+F:	package/s6-rc/
 F:	package/skalibs/
 F:	package/smack/
 F:	package/xvisor/
@@ -481,6 +494,7 @@ F:	configs/mx6sx_udoo_neo_defconfig
 F:	configs/mx6udoo_defconfig
 F:	configs/wandboard_defconfig
 F:	configs/warp7_defconfig
+F:	package/kmscube/
 
 N:	Fabio Porcedda <fabio.porcedda@gmail.com>
 F:	package/netsurf-buildsystem/
@@ -898,6 +912,8 @@ F:	package/x11r7/xdriver_xf86-video-imx/
 F:	package/x11r7/xdriver_xf86-video-imx-viv/
 
 N:	Jörg Krause <joerg.krause@embedded.rocks>
+F:	board/lemaker/bananapro/
+F:	configs/bananapro_defconfig
 F:	package/bctoolbox/
 F:	package/libshout/
 F:	package/libupnpp/
@@ -998,6 +1014,7 @@ F:	package/libsecret/
 
 N:	Martin Bark <martin@barkynet.com>
 F:	package/ca-certificates/
+F:	package/nodejs/
 F:	package/tzdata/
 F:	package/zic/
 
@@ -1423,6 +1440,9 @@ F:	package/libtasn1/
 F:	package/proxychains-ng/
 F:	package/yasm/
 
+N:	Stefan Sørensen <stefan.sorensen@spectralink.com>
+F:	package/libscrypt/
+
 N:	Stephan Hoffmann <sho@relinux.de>
 F:	package/cache-calibrator/
 F:	package/gtest/
@@ -1636,6 +1656,7 @@ F:	package/libseccomp/
 F:	package/linux-tools/
 F:	package/mesa3d-headers/
 F:	package/mke2img/
+F:	package/nbd/
 F:	package/nut/
 F:	package/nvidia-driver/
 F:	package/omxplayer/

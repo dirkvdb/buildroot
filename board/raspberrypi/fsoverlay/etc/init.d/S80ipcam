@@ -1,0 +1,44 @@
+#!/bin/sh
+#
+# ipcam        Starts mjpg-stream to serve the camera stream.
+#
+
+umask 077
+
+start() {
+	modprobe bcm2835-v4l2
+	mkdir -p /tmp/stream
+	
+	printf "Starting camera server: "
+	raspistill --nopreview -w 1024 -h 768 -q 60 -o /tmp/stream/pic.jpg -tl 0 -t 9999999 -th 0:0:0 &
+	mjpg_streamer -b -i "input_file.so -f /tmp/stream -n pic.jpg" -o "output_http.so -w /usr/www"
+	echo "OK"
+}
+stop() {
+	printf "Stopping camera server: "
+	killall raspistill
+	killall mjpg_streamer
+	echo "OK"
+}
+restart() {
+	stop
+	start
+}
+
+case "$1" in
+  start)
+	start
+	;;
+  stop)
+	stop
+	;;
+  restart|reload)
+	restart
+	;;
+  *)
+	echo "Usage: $0 {start|stop|restart}"
+	exit 1
+esac
+
+exit $?
+

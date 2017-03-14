@@ -1,0 +1,45 @@
+#!/bin/sh
+#
+# Apply some power saving options
+#
+
+umask 077
+
+start() {
+	# disable the activity led
+	echo none > /sys/class/leds/led0/trigger
+	echo 1 > /sys/class/leds/led0/brightness
+
+	# turn off the hdmi output
+	tvservice -o
+}
+stop() {
+	# enable the activity led
+	echo mmc0 > /sys/class/leds/led0/trigger
+	echo 0 > /sys/class/leds/led0/brightness
+
+	# turn on the hdmi output
+	tvservice -p
+}
+restart() {
+	stop
+	start
+}
+
+case "$1" in
+  start)
+	start
+	;;
+  stop)
+	stop
+	;;
+  restart|reload)
+	restart
+	;;
+  *)
+	echo "Usage: $0 {start|stop|restart}"
+	exit 1
+esac
+
+exit $?
+

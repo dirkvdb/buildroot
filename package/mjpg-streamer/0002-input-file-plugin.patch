@@ -1,0 +1,11 @@
+--- mjpg-streamer-bbf32fddfd02a9e072e89e83a5b33e6ca0a7bd4b/Makefile	2015-11-09 15:56:47.000000000 +0100
++++ mjpg-streamer-bbf32fddfd02a9e072e89e83a5b33e6ca0a7bd4b/Makefile2	2017-03-16 09:36:01.450369258 +0100
+@@ -38,7 +38,7 @@
+ PLUGINS += output_http.so
+ PLUGINS += input_testpicture.so
+ #PLUGINS += output_autofocus.so
+-#PLUGINS += input_file.so
++PLUGINS += input_file.so
+ # PLUGINS += input_pylon.so
+ # PLUGINS += input_megatec.so
+ # PLUGINS += output_mars2020.so

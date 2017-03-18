@@ -13,7 +13,6 @@ start() {
 }
 stop() {
 	printf "Stopping camera server: "
-	killall raspistill
 	killall mjpg_streamer
 	echo "OK"
 }

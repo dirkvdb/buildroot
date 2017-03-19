@@ -6,7 +6,6 @@
 umask 077
 
 start() {
-	modprobe bcm2835-v4l2
 	printf "Starting camera server: "
 	mjpg_streamer -b -i "input_raspicam.so -x 1280 -y 720 -fps 15" -o "output_http.so -w /usr/share/mjpg-streamer/www"
 	echo "OK"

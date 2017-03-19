@@ -15,6 +15,7 @@ disable_overscan=1
 
 # enable camera
 start_x=1
+disable_camera_led=1
 
 # How much memory in MB to assign to the GPU on Pi models having
 # 256, 512 or 1024 MB total memory
